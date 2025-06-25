@@ -1,0 +1,102 @@
+    <!DOCTYPE html><html lang=”en”>
+<head>
+  <meta charset=”UTF-8”>
+  <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+  <meta name=”description” content=”Portfolio website of a creative web developer skilled in HTML, CSS, JavaScript, and modern frontend tools.”>
+  <meta name=”keywords” content=”Web Developer, Portfolio, Frontend, HTML, CSS, JavaScript, React”>
+  <meta name=”author” content=”Your Name”>
+  <title>Advanced Developer Portfolio</title>
+  <link rel=”stylesheet” href=”style.css”>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <script src=https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js></script>
+  <style>
+    Html {
+      Scroll-behavior: smooth;
+    }
+    .parallax {
+      Background: url(‘https://picsum.photos/1600/900?blur=2’) center/cover fixed;
+    }
+  </style>
+  <script type=”application/ld+json”>
+    {
+      “@context”: https://schema.org,
+      “@type”: “Person”,
+      “name”: “Your Name”,
+      “url”: https://yourdomain.com,
+      “sameAs”: [https://github.com/yourprofile, https://linkedin.com/in/yourprofile],
+      jobTitle: "Frontend Developer",
+      worksFor: {
+        "@type”: “Organization”,
+        “name”: “Freelance”
+      }
+    }
+  </script>
+</head>
+<body class=”bg-gradient-to-br from-gray-50 via-white to-purple-100 text-gray-900”>  <!—Language Toggle   <div class=”fixed top-4 right-4 z-50”>
+    <select id=”languageToggle” class=”p-2 rounded border”>
+      <option value=”en”>🇬🇧 English</option>
+      <option value=”hi”>🇮🇳 हिन्दी</option>
+    </select>
+  </div>  <!—Navigation   <nav class=”fixed w-full z-50 transition-all duration-300 py-4 bg-white shadow-md”>
+    <div class=”container mx-auto px-6 flex justify-between items-center”>
+      <a href=”#” class=”text-2xl font-bold text-gray-800”>DevPortfolio</a>
+      <div class=”hidden md:flex space-x-8”>
+        <a href=”#home” class=”nav-link text-gray-700 hover:text-purple-600”>Home</a>
+        <a href=”#about” class=”nav-link text-gray-700 hover:text-purple-600”>About</a>
+        <a href=”#skills” class=”nav-link text-gray-700 hover:text-purple-600”>Skills</a>
+        <a href=”#projects” class=”nav-link text-gray-700 hover:text-purple-600”>Projects</a>
+        <a href=”#contact” class=”nav-link text-gray-700 hover:text-purple-600”>Contact</a>
+      </div>
+    </div>
+  </nav>  <!—Scroll Progress Bar   <div class=”h-1 bg-purple-600 fixed top-0 left-0 z-50” id=”scrollProgress”></div>  <!—Hero Section with Parallax and Typewriter   <section id=”home” class=”hero min-h-screen flex items-center justify-center text-white parallax”>
+    <div class=”text-center backdrop-blur-sm bg-black/40 p-10 rounded-xl”>
+      <h1 class=”text-5xl font-bold mb-4”>Hi, I’m <span class=”text-yellow-300”>Your Name</span></h1>
+      <h2 class=”text-3xl mb-6 typewriter” data-texts=’[“Web Developer”, “Frontend Engineer”, “UI/UX Enthusiast”]’></h2>
+      <a href=”resume.pdf” download class=”mt-4 inline-block px-6 py-3 bg-white text-purple-700 font-semibold rounded hover:bg-gray-200”>Download Resume</a>
+    </div>
+  </section>  <!—Testimonials Slider   <section class=”py-20 bg-white”>
+    <div class=”text-center mb-10”>
+      <h2 class=”text-3xl font-bold”>What People Say</h2>
+    </div>
+    <div class=”overflow-hidden relative max-w-4xl mx-auto”>
+      <div id=”testimonialSlider” class=”flex transition-all duration-500”>
+        <div class=”min-w-full px-6 text-center”>
+          <p class=”text-xl italic”>“A creative and reliable developer – our go-to for frontend work.”</p>
+          <h4 class=”mt-4 font-bold”>– John Doe</h4>
+        </div>
+        <div class=”min-w-full px-6 text-center”>
+          <p class=”text-xl italic”>“Transformed our designs into stunning responsive websites.”</p>
+          <h4 class=”mt-4 font-bold”>– Jane Smith</h4>
+        </div>
+      </div>
+    </div>
+  </section>  <!—Footer   <footer class=”bg-gray-800 text-white py-6 text-center”>
+    <p>&copy; 2025 Your Name. Built with Tailwind CSS.</p>
+  </footer>  <script src=”script.js”></script>  <script>
+    // Scroll progress
+    Window.addEventListener(‘scroll’, () => {
+      Const winScroll = document.documentElement.scrollTop;
+      Const height = document.documentElement.scrollHeight – document.documentElement.clientHeight;
+      Const scrolled = (winScroll / height) * 100;
+      Document.getElementById(‘scrollProgress’).style.width = `${scrolled}%`;
+    });
+
+    // Language switch (basic demo)
+    Document.getElementById(‘languageToggle’).addEventListener(‘change’, function() {
+      Alert(‘Language switching not yet implemented – demo only’);
+    });
+
+    // Testimonials slider
+    Let slideIndex = 0;
+    setInterval(() => {
+      slideIndex = (slideIndex + 1) % 2;
+      document.getElementById(‘testimonialSlider’).style.transform = `translateX(-${slideIndex * 100}%)`;
+    }, 4000);
+
+    // Tilt effect for skill cards
+    VanillaTilt.init(document.querySelectorAll(“.skill-card”), { max: 15, speed: 400 });
+  </script>
+
+</body>
+</html>
